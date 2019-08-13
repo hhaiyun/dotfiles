@@ -1,0 +1,111 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 5
+        color_good = "#AAFF0E"
+  color_degraded = "#FFFC07"
+  color_bad = "#FF8F04"
+}
+
+order += "mpd_status"
+order += "volume master"
+order += "disk /"
+order += "net_rate"
+order += "battery_level"
+order += "sysdata"
+order += "tztime local"
+
+
+
+mpd_status {
+    cache_timeout = 1
+    format ="{state} [[{artist} - ]{title}]|{file}"
+    max_width = 20
+    state_pause = "" 
+    state_play = ""
+    state_stop = ""
+
+}
+
+battery_level{
+    cache_timeout = 10
+	color_bad = "#FF8F04"
+	color_charging = "#FCE94F"
+	color_degraded = "#FFFC07"
+	color_good = "#AAFF0E"
+
+	format_notify_charging = "charging"
+	format_notify_discharging = "discharging {percent}"
+	hide_when_full = False
+        hide_seconds = True
+	notification = True
+	notify_low_level = True
+	blocks = ""
+	charging_character = ""
+	format = " {percent} {icon} {time_remaining}"
+	color_charging = "#FFFFFF"
+}
+
+net_rate {
+	format = "{down} {up}"
+	format = "{total}"
+	precision = 0
+	format_no_connection = ""
+        cache_timeout = 5
+}
+
+online_status{
+    cache_timeout = 5
+    format = "{icon}"
+    url = "www.baidu.com"
+}
+
+rainbow time {
+    time {}
+}
+
+sysdata{
+    cache_timeout = 3
+}
+
+volume master {
+        format = " : %volume"
+        format_muted = "
+  : muted (%volume)"
+        device = "pulse:alsa_output.pci-0000_00_05.0.analog-stereo"
+}
+
+
+wireless _first_ {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
+
+ethernet _first_ {
+        # if you use %speed, i3status requires root privileges
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+battery all {
+        format = "%status %percentage %remaining"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
+
+load {
+        format = "%1min"
+}
+
+disk "/" {
+        format = "%avail"
+}
