@@ -5,7 +5,8 @@ i3wm配置文件
 |--|:--:|:--:|
 |系统| |Ubuntu|
 |系统功能|窗口管理器|i3|
-||快速启动|rofi
+|  |快速启动|rofi|
+|  |通知管理|xfce4=notifyd|
 |  |联网管理|wicd|
 |  |音频输入|alsa+pavucontrol|
 |  |亮度调节|xbacklight|
@@ -16,7 +17,7 @@ i3wm配置文件
 |  |混成器|compton|
 |  |主题|Adapta|
 |  |图标|Papirus|
-|基础软件|终端|xfce-terminal|
+|基础软件|终端|xfce4-terminal|
 |  |文件管理器|thunar|
 |  |浏览器|firefox|
 |  |音频播放|mpd+mpc|
