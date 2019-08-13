@@ -8,7 +8,7 @@ i3wm配置文件
 |  |快速启动|rofi|
 |  |通知管理|xfce4-notifyd|
 |  |联网管理|wicd|
-|  |音频输入|alsa+pavucontrol|
+|  |音频输出|alsa+pavucontrol|
 |  |亮度调节|xbacklight|
 |  |输入法|Fcitx|
 |  |状态栏|py3status|
