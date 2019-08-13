@@ -1,0 +1,6 @@
+rofi.combi-modi:    window,drun,ssh,run
+rofi.font:          思源黑体 12
+rofi.modi:          combi
+rofi.theme: /usr/share/rofi/themes/Adapta-Nokto.rasi
+rofi.show-icons:    true
+rofi.drun-icon-theme: "Papirus-Dark"
